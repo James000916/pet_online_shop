@@ -3,6 +3,8 @@ html {
     scroll-behavior: smooth;
 }
 
+.w3-animate-top{position:relative;animation:animatetop 1s;}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+
 body {
     background-image: url("img/bg.jpg");
     background-size: 100%;
@@ -21,8 +23,7 @@ nav + h1 {
     padding-top: 80px;
     padding-bottom: 20px;
     text-align: center;
-    font-family: 'Berkshire Swash';
-    font-weight: bold;
+    font-family: 'Knewave', cursive;
     animation-name: shadow-animation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -38,6 +39,10 @@ nav + h1 {
     100% { text-shadow: 3px 3px 15px red; }
 }
 
+h2 {
+    font-family: 'Knewave', cursive;
+}
+
 .float {
     margin: 10px;
     float: left;
@@ -48,8 +53,13 @@ a[name] {
     font-style: italic;
 }
 
+.grad {
+    background: rgb(255, 185, 105);
+    background: linear-gradient(90deg, rgb(255, 185, 105) 0%, rgb(255, 198, 95) 56%, rgba(255,212,156,1) 100%);
+}
+
 /* Mouse hover effect */
-.zoom {
+.zoom{
     transition: transform .2s;
     margin: 0 auto;
 }
@@ -88,5 +98,13 @@ a:hover.back-to-top {
 
 div[class="card"] {
     border: 3px solid orange;
-    border-radius: 30px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+div[class="card-body"] {
+    text-align: center;
+}
+
+.card {
+    border: 1px solid orange;
 }
