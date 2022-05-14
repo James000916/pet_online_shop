@@ -1,0 +1,92 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("img/bg.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+/* The space on both sides */
+[class="container-fluid"] {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+/* Main heading */
+nav + h1 {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: 'Berkshire Swash';
+    font-weight: bold;
+    animation-name: shadow-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Main heading color animation */
+@keyframes shadow-animation {
+    0%   { text-shadow: 3px 3px 15px red; }
+    20%  { text-shadow: 3px 3px 15px yellow; }
+    40%  { text-shadow: 3px 3px 15px purple; }
+    60%  { text-shadow: 3px 3px 15px lawngreen; }
+    80%  { text-shadow: 3px 3px 15px blue; }
+    100% { text-shadow: 3px 3px 15px red; }
+}
+
+.float {
+    margin: 10px;
+    float: left;
+}
+
+a[name] {
+    padding: 56px;
+    font-style: italic;
+}
+
+/* Mouse hover effect */
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+/* Name card button facebook icon */
+[href*="facebook"]::before {
+    content: url("img/fb.png");
+}
+
+/* Name card button instagram icon */
+[href*="instagram"]::before {
+    content: url("img/ig.png");
+}
+
+/* Back to top button style */
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: orange url("img/up-arrow.png") no-repeat center 43%;
+    border-radius: 30px;
+}
+a:hover.back-to-top {
+    background-color: darkorange;
+    transition: 1s;
+}
+
+div[class="card"] {
+    border: 3px solid orange;
+    border-radius: 30px;
+}
